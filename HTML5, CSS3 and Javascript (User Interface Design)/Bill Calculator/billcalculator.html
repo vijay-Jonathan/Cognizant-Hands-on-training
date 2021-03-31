@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link rel="stylesheet" href="billcalc.css">
+         -->
+    </head>
+    <!-- <style>
+        h1{
+   text-align:center;
+   color:#FF00FF;
+   font-style:italic;
+   font-weight:bold;
+ }
+
+ table{
+     text-align:left;
+     margin-left:35%;
+     border-spacing:10px;
+     border-width:10%;
+     border-style:solid;
+     background-color:#F899A4;
+     
+
+ }
+ td{
+     border-style:ridge;
+     padding:10px;
+ }
+    </style> -->
+    <body>
+        <h1>Bill Calculator</h1>
+        <form id="form" name="form" onsubmit="return calculateTotalPrice()" action="#">
+        <table border="1">
+            <tr>
+                <td>
+                    Product Name
+                </td>
+                <td> 
+                <input type="text" id="productName" name="productName" placeholder="Product Name" required></td>
+            </tr>
+            <tr>
+                <td>Product Price in Rs.</td>
+                <td>
+                    <input type="number" id="price" name="Price" placeholder="Product Price" required></td>
+            </tr>
+            <tr><td>Quantity</td>
+                <td>
+                    <input type="number" id="qty" name="qty" placeholder="Enter quantity" min="1" required>
+                </td>
+            </tr>
+            
+            <tr><td>Total Price in Rs.</td>
+                <td>
+                    <output type="number" id="totalprice" for="price qty" name="totalprice">
+                        </output>
+                </td>
+            </tr>
+            <tr>
+                
+                <td colspan="2" >
+                    <input type="submit" id="submit" name="submit" >
+                </td>
+            </tr>
+        </table>
+        </form>
+        <script type="text/javascript" charset="utf-8">
+            function calculateTotalPrice(){
+                var x=document.getElementById("price").value;
+                var y=document.getElementById("qty").value;
+                document.getElementById("totalprice").innerHTML=""+(x*y);
+                return false;
+            }
+        </script>
+    </body>
+<!-- Write appropriate and complete  HTML  CODE with proper syntax HERE. Also write approriate code to link billcalc.css file from this file.-->
+    
+    
+</html>
